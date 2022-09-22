@@ -50,3 +50,5 @@ class Item:
 
 phone1 = Item("jscPhonev10", 500, 5)
 phone2 = Item("jscPhonev20", 700, 5)
+
+# Test change
