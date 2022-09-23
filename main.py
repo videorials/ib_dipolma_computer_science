@@ -38,7 +38,10 @@ class Item:
 
     @staticmethod
     def is_integer(num):
+        # We will count out the floats that are point zero
+        # For i.e. 5.0, 10.0
         if isinstance(num, float):
+            # Count the floats that are point zero
             return num.is_integer()
         elif isinstance(num, int):
             return True
@@ -48,7 +51,20 @@ class Item:
     def __repr__(self):
         return f"Item ('{self.name}', {self.price}, {self.quantity})"
 
-phone1 = Item("jscPhonev10", 500, 5)
-phone2 = Item("jscPhonev20", 700, 5)
 
-# Test change
+class Phone(Item):
+    all = []
+    def __init__(self, name:str, price:float, quantity:int =0, broken_phones=0):
+
+        super().__init__(name, price, quantity)
+
+        # validate parameters/arguments
+        assert broken_phones >= 0, f"Broken Phones {broken_phones} is not greater than or equal to zero!"
+
+        # instance attributes
+        self.broken_phones = broken_phones
+
+        # actions to execute
+        Phone.all.append(self)
+
+phone1 = Phone("jsvPhonev10", 500, 5, 1)
