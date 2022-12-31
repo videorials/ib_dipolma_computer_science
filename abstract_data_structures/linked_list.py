@@ -1,5 +1,8 @@
-# Methods that should be known are add (head and tail), insert (in order), delete, list, isEmpty, isFull.
-# IB Java Examination Subset Tool (JETS)
+# IB Assessment Statement | Methods that should be known are:
+    # add (head and tail), insert (in order), delete,
+    # list, isEmpty, isFull.
+# IB Java Examination Subset Tool (JETS) | based on https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
+    # LinkedList<E> where E defines the type of elements held in the list
     # add(E e), addFirst(E e), addLast(E e)
     # clear()
     # element(), get(int index), getFirst(), getLast()
@@ -9,7 +12,6 @@
 
 # https://youtu.be/qp8u-frRAnU
 # https://www.cs-ib.net/sections/05-05-linked-lists.html
-# https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
 
 class Node:
     # -------------------- >> constructor method <<
@@ -22,10 +24,9 @@ class Node:
         self.next = next
 
 
-# LinkedList<E> where E defines the type of elements held in the list
 class LinkedList:
 
-    # >> -------------------- >> constructor method <<
+    # >> -------------------- >> constructor method
     def __init__(self, head=None):
         '''
         >> The default value None is assigned to the instance variable head, which stores
@@ -33,52 +34,77 @@ class LinkedList:
         '''
         self.head = head
 
-    # >> -------------------- >> appends element to end of list - equivalent to addLast(E)
-    def add(self, element):
-        return
-
-    def add(self, index, element):
-        return
-
-    def addFirst(self, element):
-        return
-
-    def addLast(self, element):
-        return None
-
-    def clear(self):
-        return
-
-    # >> -------------------- >> retrieves, but does not remove, the head (first element) of list
-    def element(self):
-        return
-
+    # >> =====================================================================================================
+    # >> -------------------- >> returns element at specified position (index) in list
     def get(self, index):
         return
 
+    # >> -------------------- >> returns first element in list
     def getFirst(self):
         return
 
+    # >> -------------------- >> returns last element in list
     def getLast(self):
         return
 
-    def remove(self):
+    # >> -------------------- >> returns position (index) of specified element in list, if present
+    def indexOf(self, element):
         return
 
-    def remove(self, index):
+    # >> -------------------- >> returns true if list contains specified element, false otherwise
+    def contains(self, element):
         return
 
-    def removeFirst():
+    # >> -------------------- >> returns string containing elements in list (in order), if present
+    def list(self):
         return
 
-    def removeLast(self):
-        return
-
+    # >> -------------------- >> returns number of elements in list
     def size(self):
         return
 
+    # >> -------------------- >> returns true if list contains no elements, false otherwise
     def isEmpty(self):
         return
+
+    # >> =====================================================================================================
+    # >> -------------------- >> inserts element at the specified position (exisiting elements shifted to the right)
+    def add(self, index, element):
+        return
+
+    # >> -------------------- >> inserts element at beginning (head) of list
+    def addFirst(self, element):
+        return
+
+    # >> -------------------- >> appends element to end (tail) of list
+    def addLast(self, element):
+        return None
+
+    # >> =====================================================================================================
+    # >> -------------------- >> removes first occurrence of specified element from list, if present
+    def remove(self, element):
+        return
+
+    # >> -------------------- >> removes and returns element at specified position (index) in list (shifts exiting elements left)
+    def removeAt(self, index):
+        return
+
+    # >> -------------------- >> removes and returns first element from list
+    def removeFirst():
+        return
+
+    # >> -------------------- >> removes and returns last element from list
+    def removeLast(self):
+        return
+
+    # >> -------------------- >> Removes all elements from list
+    def clear(self):
+        return
+
+
+
+
+
 
 
 
