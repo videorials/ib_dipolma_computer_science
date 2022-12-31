@@ -1,7 +1,15 @@
+# Methods that should be known are add (head and tail), insert (in order), delete, list, isEmpty, isFull.
+# IB Java Examination Subset Tool (JETS)
+    # add(E e), addFirst(E e), addLast(E e)
+    # clear()
+    # element(), get(int index), getFirst(), getLast()
+    # remove(), remove(int index), removeFirst(), removeLast()
+    # size()
+    # isEmpty()
+
 # https://youtu.be/qp8u-frRAnU
 # https://www.cs-ib.net/sections/05-05-linked-lists.html
-
-# Methods | add (head and tail), insert (in order), delete, list, isEmpty, isFull.
+# https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
 
 class Node:
     # -------------------- >> constructor method <<
@@ -13,7 +21,10 @@ class Node:
         self.data = data
         self.next = next
 
+
+# LinkedList<E> where E defines the type of elements held in the list
 class LinkedList:
+
     # >> -------------------- >> constructor method <<
     def __init__(self, head=None):
         '''
@@ -21,6 +32,55 @@ class LinkedList:
            the Node at the head of the LinkedList.
         '''
         self.head = head
+
+    # >> -------------------- >> appends element to end of list - equivalent to addLast(E)
+    def add(self, element):
+        return
+
+    def add(self, index, element):
+        return
+
+    def addFirst(self, element):
+        return
+
+    def addLast(self, element):
+        return None
+
+    def clear(self):
+        return
+
+    # >> -------------------- >> retrieves, but does not remove, the head (first element) of list
+    def element(self):
+        return
+
+    def get(self, index):
+        return
+
+    def getFirst(self):
+        return
+
+    def getLast(self):
+        return
+
+    def remove(self):
+        return
+
+    def remove(self, index):
+        return
+
+    def removeFirst():
+        return
+
+    def removeLast(self):
+        return
+
+    def size(self):
+        return
+
+    def isEmpty(self):
+        return
+
+
 
     # >> -------------------- >> setter methods <<
     def insert_at_head(self, data):
