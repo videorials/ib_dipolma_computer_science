@@ -34,7 +34,34 @@ class LinkedList:
         '''
         self.head = head
 
-    # >> =====================================================================================================
+    # >> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    # >> -------------------- >> appends specified element to end of this list (equivalent to addLast method)
+    def add(self, index, element):
+        return
+
+    # >> -------------------- >> inserts element inorder (exisiting elements shifted to the right)
+    def insert(self, element):
+        return
+
+    # >> -------------------- >> inserts element at the specified position (exisiting elements shifted to the right)
+    def insertAt(self, index, element):
+        return
+
+    # >> -------------------- >> inserts element at beginning (head) of list
+    def addFirst(self, element):
+        return
+
+    # >> -------------------- >> appends element to end (tail) of list
+    def addLast(self, element):
+        return None
+
+    # >> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    # >> -------------------- >> returns true if list contains specified element, false otherwise
+    def contains(self, element):
+        return
+
     # >> -------------------- >> returns element at specified position (index) in list
     def get(self, index):
         return
@@ -51,10 +78,6 @@ class LinkedList:
     def indexOf(self, element):
         return
 
-    # >> -------------------- >> returns true if list contains specified element, false otherwise
-    def contains(self, element):
-        return
-
     # >> -------------------- >> returns string containing elements in list (in order), if present
     def list(self):
         return
@@ -67,20 +90,8 @@ class LinkedList:
     def isEmpty(self):
         return
 
-    # >> =====================================================================================================
-    # >> -------------------- >> inserts element at the specified position (exisiting elements shifted to the right)
-    def add(self, index, element):
-        return
+    # >> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    # >> -------------------- >> inserts element at beginning (head) of list
-    def addFirst(self, element):
-        return
-
-    # >> -------------------- >> appends element to end (tail) of list
-    def addLast(self, element):
-        return None
-
-    # >> =====================================================================================================
     # >> -------------------- >> removes first occurrence of specified element from list, if present
     def remove(self, element):
         return
