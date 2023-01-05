@@ -73,7 +73,7 @@ class LinkedList:
 
     def getFirst(self):
         # >> -------------------- >> returns first element in list
-        return self.head
+        return self.head.data
 
     def getLast(self):
         # >> -------------------- >> returns last element in list
@@ -82,7 +82,7 @@ class LinkedList:
         while node_iterator.next != None:
             node_iterator = node_iterator.next
 
-        return node_iterator
+        return node_iterator.data
 
     def list(self):
         # >> -------------------- >> returns string containing elements in list (in order), if present
