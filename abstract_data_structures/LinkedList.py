@@ -115,25 +115,30 @@ class LinkedList:
 
 
 class Queue(LinkedList):
-    
-    def __init__(self):
-        super().__init__()
-        self.maxSize = 0
-    
-    def setMaxSize(self, int):
-        self.maxSize = int
 
-    def enqueue(data):
+    def enqueue(self, element):
+        self.addLast(element)
+    
+    def dequeue(self):
+        self.removeFirst()
+            
+
+class Stack(LinkedList):
+
+    def push(self, data):
         return
     
-    def dequeue(data):
-        return
+    def pop(self):
+        self.removeFirst()
+
 
 ll_queue = Queue()
-
-
-print(ll_queue.head)
-print(ll_queue.maxSize)
+ll_queue.enqueue('apple')
+ll_queue.enqueue('orange')
+ll_queue.enqueue('pear')
+print(ll_queue.list())
+ll_queue.dequeue()
+print(ll_queue.list())
 
 # ll = LinkedList()
 # ll.addFirst('apple')
