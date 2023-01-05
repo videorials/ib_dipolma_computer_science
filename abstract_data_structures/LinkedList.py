@@ -1,6 +1,6 @@
 # IB Assessment Statement | Methods that should be known are:
-    # add (head and tail), insert (in order), delete,
-    # list, isEmpty, isFull.
+    # add (head and tail), insert (in order), delete, list, isEmpty, isFull.
+
 # IB Java Examination Subset Tool (JETS) | based on https://docs.oracle.com/javase/7/docs/api/java/util/LinkedList.html
     # LinkedList<E> where E defines the type of elements held in the list
     # add(E e), addFirst(E e), addLast(E e)
@@ -45,9 +45,12 @@ class LinkedList:
 
     def removeFirst(self):
         # >> -------------------- >> removes and returns first element from list
-        data = self.head.data
-        self.head = self.head.next
-        return data
+        if self.head == None:
+            return
+        else:
+            data = self.head.data
+            self.head = self.head.next
+            return data
 
     def removeLast(self):
         # >> -------------------- >> removes and returns last element from list
@@ -84,7 +87,7 @@ class LinkedList:
     def list(self):
         # >> -------------------- >> returns string containing elements in list (in order), if present
         if self.isEmpty():
-            return ("Linked list is empty")
+            return ("List is empty")
         else:
             node_iterator = self.head
             list_as_string = ''
@@ -93,7 +96,7 @@ class LinkedList:
                 if node_iterator.next != None:
                     list_as_string += ' --> '
                 node_iterator = node_iterator.next
-            return (list_as_string)
+            return list_as_string
 
     def size(self):
         # >> -------------------- >> returns number of elements in list
@@ -125,30 +128,8 @@ class Queue(LinkedList):
 
 class Stack(LinkedList):
 
-    def push(self, data):
-        return
+    def push(self, element):
+        self.addFirst(element)
     
     def pop(self):
         self.removeFirst()
-
-
-ll_queue = Queue()
-ll_queue.enqueue('apple')
-ll_queue.enqueue('orange')
-ll_queue.enqueue('pear')
-print(ll_queue.list())
-ll_queue.dequeue()
-print(ll_queue.list())
-
-# ll = LinkedList()
-# ll.addFirst('apple')
-# ll.addFirst('pear')
-# ll.addLast('orange')
-# ll.addFirst('peach')
-# print(ll.list())
-# print(ll.removeFirst())
-# print(ll.list())
-# print(ll.removeLast())
-# print(ll.list())
-# print(ll.clear())
-# print(ll.size())
