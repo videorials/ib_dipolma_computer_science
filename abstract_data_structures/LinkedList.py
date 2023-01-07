@@ -14,11 +14,25 @@
 # https://www.cs-ib.net/sections/05-05-linked-lists.html
 
 class Node:
-    # -------------------- >> constructor method <<
-    def __init__ (self, data=None, next=None):
+
+    # >> ----------------------------------------------------------------------------- >> constructor method <<
+    def __init__ (self, data, next=None):
 
         self.data = data
         self.next = next
+    
+    # >> ----------------------------------------------------------------------------- >> setter methods <<
+
+    def setNext(self, element):
+        self.next = element
+
+    # >> ----------------------------------------------------------------------------- >> getter methods <<
+
+    def getData(self):
+        return self.data
+    
+    def getNext(self):
+        return self.next
 
 
 class LinkedList:
@@ -39,28 +53,28 @@ class LinkedList:
             self.head = Node(element, None)
         else:
             node_iterator = self.head
-            while node_iterator.next != None:
-                node_iterator = node_iterator.next
-            node_iterator.next = Node(element, None)
+            while node_iterator.getNext() != None:
+                node_iterator = node_iterator.getNext()
+            node_iterator.setNext(Node(element, None))
 
     def removeFirst(self):
         # >> -------------------- >> removes and returns first element from list
         if self.head == None:
             return
         else:
-            data = self.head.data
-            self.head = self.head.next
+            data = self.head.getData()
+            self.head = self.head.getNext()
             return data
 
     def removeLast(self):
         # >> -------------------- >> removes and returns last element from list
         node_iterator = self.head
 
-        while node_iterator.next.next != None:
-            node_iterator = node_iterator.next
+        while node_iterator.getNext().getNext() != None:
+            node_iterator = node_iterator.getNext()
         
-        data = node_iterator.next.data
-        node_iterator.next = None
+        data = node_iterator.getNext().getData()
+        node_iterator.setNext(None)
         return data
 
     def clear(self):
@@ -73,16 +87,16 @@ class LinkedList:
 
     def getFirst(self):
         # >> -------------------- >> returns first element in list
-        return self.head.data
+        return self.head.getData()
 
     def getLast(self):
         # >> -------------------- >> returns last element in list
         node_iterator = self.head
 
-        while node_iterator.next != None:
-            node_iterator = node_iterator.next
+        while node_iterator.getNext() != None:
+            node_iterator = node_iterator.getNext()
 
-        return node_iterator.data
+        return node_iterator.getData()
 
     def list(self):
         # >> -------------------- >> returns string containing elements in list (in order), if present
@@ -92,10 +106,10 @@ class LinkedList:
             node_iterator = self.head
             list_as_string = ''
             while node_iterator != None:
-                list_as_string += str(node_iterator.data)
-                if node_iterator.next != None:
+                list_as_string += str(node_iterator.getData())
+                if node_iterator.getNext() != None:
                     list_as_string += ' --> '
-                node_iterator = node_iterator.next
+                node_iterator = node_iterator.getNext()
             return list_as_string
 
     def size(self):
@@ -105,7 +119,7 @@ class LinkedList:
 
         while node_iterator != None:
             count_nodes += 1
-            node_iterator = node_iterator.next
+            node_iterator = node_iterator.getNext()
 
         return count_nodes
 

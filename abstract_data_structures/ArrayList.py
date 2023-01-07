@@ -54,7 +54,7 @@ class ArrayList:
             return ("List is empty")
         else:
             list_as_string = ''
-            list_size = self.size()
+            list_size = len(self.arrayList)
             for index in range(list_size):
                 list_as_string += str(self.arrayList[index])
                 if index < list_size - 1:
@@ -67,7 +67,7 @@ class ArrayList:
 
     def isEmpty(self):
     # >> -------------------- >> returns true if list contains no elements, false otherwise
-        if self.size() == 0:
+        if len(self.arrayList) == 0:
             return True
         else:
             return False
