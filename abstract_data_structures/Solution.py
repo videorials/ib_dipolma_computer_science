@@ -1,4 +1,4 @@
-from linked_list import *
+from LinkedList import *
 
 class Solution(object):
 
@@ -13,7 +13,7 @@ class Solution(object):
             l2_data = l2_cur.data if l2_cur else 0
 
             tmp_tot = l1_data + l2_data + carry
-            l3.add_last(tmp_tot % 10)
+            l3.addLast(tmp_tot % 10)
             carry = tmp_tot // 10
 
             if l1_cur: l1_cur = l1_cur.next 
