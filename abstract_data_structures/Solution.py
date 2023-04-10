@@ -2,7 +2,7 @@ from LinkedList import *
 
 class Solution(object):
 
-    def add_two_numbers(self, l1, l2):
+    def addTwoNumbers(self, l1, l2):
 
         l1_cur, l2_cur = l1.head, l2.head
         l3 = LinkedList()

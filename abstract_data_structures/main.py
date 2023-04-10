@@ -11,8 +11,8 @@ def main():
     for i in a2: l2.addFirst(i)
 
     solution = Solution()
-    output = solution.add_two_numbers(l1,l2)
-    output.list()
+    output = solution.addTwoNumbers(l1,l2)
+    print(output.list())
 	
 
 if __name__ == "__main__":
