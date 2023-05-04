@@ -7,6 +7,8 @@ class Person {
   }
   
   introduceSelf() {
+    const elem = document.querySelector('#debug')
+    elem.innerText += `Hi! I'm ${this.name}`
     console.log(`Hi! I'm ${this.name}`);
   }
 
@@ -20,7 +22,11 @@ class Teacher extends Person {
   }
 
   introduceSelf() {
+
+    const elem = document.querySelector('#debug')
+    elem.innerText += `\nMy name is ${this.name}, and I will be your ${this.teaches} teacher.`
     console.log(`My name is ${this.name}, and I will be your ${this.teaches} teacher.`);
+
   }
   
 }
@@ -35,6 +41,8 @@ class Student extends Person {
   }
 
   introduceSelf() {
+    const elem = document.querySelector('#debug')
+    elem.innerText += `\nHi! I'm ${this.name}, and I'm in year ${this.#year}.`
     console.log(`Hi! I'm ${this.name}, and I'm in year ${this.#year}.`);
   }
   
