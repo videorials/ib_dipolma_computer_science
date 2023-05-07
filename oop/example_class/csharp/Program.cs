@@ -5,7 +5,7 @@ namespace vscode
 
     class Person
     {
-        private string name;
+        protected string name;
 
         // constructor
         public Person(string aName)
@@ -13,7 +13,7 @@ namespace vscode
             name = aName;
         }
 
-        public void introduceMyself()
+        public virtual void introduceMyself()
         {
             Console.WriteLine("Hello, my name is " + this.name);
         }
@@ -28,6 +28,12 @@ namespace vscode
         {
             subject = teaches;
         }
+
+        public override void introduceMyself()
+        {
+            base.introduceMyself();
+            Console.WriteLine("... and I am a teacher of " + this.subject);
+        }
     }
 
     class Student : Person
@@ -38,6 +44,13 @@ namespace vscode
         {
             year = yearGroup;
         }
+
+        public override void introduceMyself()
+        {
+            base.introduceMyself();
+            Console.Write("... and I am a student in year " + Convert.ToString(this.year));            
+        }
+
     }
 
     class Program
@@ -46,6 +59,10 @@ namespace vscode
         {
             Person aPerson = new Person("Andrew");
             aPerson.introduceMyself();
+            Teacher aTeacher = new Teacher("Mr Bramwell", "Computer Science");
+            aTeacher.introduceMyself();
+            Student aStudent = new Student("Noud", 12);
+            aStudent.introduceMyself();
         }
     }
 }
