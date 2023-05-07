@@ -13,9 +13,9 @@ namespace vscode
             name = aName;
         }
 
-        public virtual void introduceMyself()
+        public virtual string getName()
         {
-            Console.WriteLine("Hello, my name is " + this.name);
+            return this.name;
         }
 
     }
@@ -29,10 +29,9 @@ namespace vscode
             subject = teaches;
         }
 
-        public override void introduceMyself()
+        public string getSubject()
         {
-            base.introduceMyself();
-            Console.WriteLine("... and I am a teacher of " + this.subject);
+            return this.subject;
         }
     }
 
@@ -45,10 +44,9 @@ namespace vscode
             year = yearGroup;
         }
 
-        public override void introduceMyself()
+        public int getYear()
         {
-            base.introduceMyself();
-            Console.Write("... and I am a student in year " + Convert.ToString(this.year));            
+            return this.year;            
         }
 
     }
@@ -58,11 +56,12 @@ namespace vscode
         static void Main(string[] args)
         {
             Person aPerson = new Person("Andrew");
-            aPerson.introduceMyself();
             Teacher aTeacher = new Teacher("Mr Bramwell", "Computer Science");
-            aTeacher.introduceMyself();
             Student aStudent = new Student("Noud", 12);
-            aStudent.introduceMyself();
+
+            Console.WriteLine($"My name is {aPerson.getName()}");
+            Console.WriteLine($"My name is {aTeacher.getName()} and I am a teacher of {aTeacher.getSubject()}");
+            Console.WriteLine($"My name is {aStudent.getName()} and I am a student in year {aStudent.getYear()}");
         }
     }
 }
