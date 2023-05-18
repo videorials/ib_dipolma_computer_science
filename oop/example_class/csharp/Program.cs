@@ -2,7 +2,6 @@
 
 namespace vscode
 {
-
     class Person
     {
         protected string name;
